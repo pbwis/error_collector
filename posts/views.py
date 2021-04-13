@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import Post
 from django.views.generic import ListView
-
+# test
 
 class HomePageView(ListView):
     model = Post
