@@ -1,5 +1,9 @@
 migrations/
 data/
 data/software.csv
+posts/_pycache_
+software.csv
 db.sqlite3
 manage.py
+error_collector/__pycache__/settings.cpython-39.pyc
+posts/__pycache__/models.cpython-39.pyc
