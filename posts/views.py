@@ -29,3 +29,9 @@ def read_csv2(request):
     data_html = data.to_html() 
     context = {'loaded_data': data_html}
     return render(request, "posts/posts_list.html", context)
+
+    
+def read_csv3(request):
+    df = pd.read_csv('software.csv')
+
+    return render(request, "posts/posts_list.html", {'df': df})
