@@ -2,7 +2,11 @@
 
 <ul>
 {% for post in posts %}
-{{ post }}
+
+    <li>Name: {{ post.display_name }}<br>
+Version: {{ post.display_version }}<br>
+Publisher: {{ post.publisher }}<br>
+Install date: {{ post.install_date }}<br></li>
     
 {% endfor %}
 </ul>
