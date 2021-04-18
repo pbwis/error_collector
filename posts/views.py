@@ -19,3 +19,7 @@ def read_csv(request):
     os.path.join(data_folder, software.csv)
     file = file_path.open(mode="r", encoding="utf-8", newline=" ")
     pass
+
+
+def upload_file(request):
+    return HttpResponse('File')
