@@ -10,3 +10,10 @@ Install date: {{ post.install_date }}<br></li>
     
 {% endfor %}
 </ul>
+
+<form action="" method="POST" class="" enctype="multipart/form-data">
+
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Confirm</button>
+</form> 
