@@ -22,4 +22,9 @@ def read_csv(request):
 
 
 def upload_file(request):
+    form = CsvModelForm(request.POST or None, request.FILES or None)
+    if form.is_valid():
+        form.save()
+        form = CsvModelForm()
+        obj = Csv.objects.get(activated=False)
     return HttpResponse('File')
