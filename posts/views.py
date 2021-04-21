@@ -4,6 +4,7 @@ from django.shortcuts import render
 from .models import Post, Csv
 import csv, os
 from django.http import HttpResponse
+from .forms import CsvModelForm
 #from django.views.generic import ListView
 
 
@@ -27,4 +28,7 @@ def upload_file(request):
         form.save()
         form = CsvModelForm()
         obj = Csv.objects.get(activated=False)
-    return HttpResponse('File')
+        with open(obj.file_name.path, 'r') as f:
+            reader = csv.reader(f)
+            print(row)
+    return render(request, 'posts/posts_list.html', {'form': form})
