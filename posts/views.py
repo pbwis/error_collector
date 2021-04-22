@@ -34,5 +34,8 @@ def upload_file(request):
                 if i == 0:
                     pass
                 else:
+                    row = "".join(row)
+                    row = row.replace(";", " ")
                     print(row)
+                    print(type(row))
     return render(request, 'posts/posts_list.html', {'form': form})
