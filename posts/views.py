@@ -30,5 +30,9 @@ def upload_file(request):
         obj = Csv.objects.get(activated=False)
         with open(obj.file_name.path, 'r') as f:
             reader = csv.reader(f)
-            print(row)
+            for i, row in enumerate(reader):
+                if i == 0:
+                    pass
+                else:
+                    print(row)
     return render(request, 'posts/posts_list.html', {'form': form})
