@@ -36,6 +36,9 @@ def upload_file(request):
                 else:
                     row = "".join(row)
                     row = row.replace(";", " ")
+                    row = row.split()
                     print(row)
                     print(type(row))
+            obj.activated = True
+            obj.save()
     return render(request, 'posts/posts_list.html', {'form': form})
