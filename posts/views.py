@@ -35,3 +35,9 @@ def upload_file(request):
             obj.activated = True
             obj.save()
     return render(request, 'posts/posts_list.html', {'form': form})
+
+
+with file.path.open(mode="w", encoding='utf-8', newline="") as file:
+    writer = csv.writer(file)
+    for temp_list in posts:
+        writer.writerow(temp_list)
