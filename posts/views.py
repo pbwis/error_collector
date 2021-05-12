@@ -30,6 +30,7 @@ def upload_file(request):
                     row = "".join(row)
                     row = row.replace(";", " ")
                     row = row.split()
+                    Post = row[1].upper()
                     print(row)
                     print(type(row))
             obj.activated = True
