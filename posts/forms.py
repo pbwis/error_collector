@@ -8,7 +8,7 @@ class CsvModelForm(forms.ModelForm):
         fields = ('File name',)
 
 # test concept
-class postModelForm(forms.ModelForm):
+class PostModelForm(forms.ModelForm):
     class Meta:
     model = Post
     fields = ('File name',)
