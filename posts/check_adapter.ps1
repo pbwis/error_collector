@@ -15,3 +15,4 @@ $IPHT = @{
     DefaulGateway = '10.10.10.254'
     AddressFamily = $IPType
 }
+New-NetIPAddress @IPType | Out-Null
