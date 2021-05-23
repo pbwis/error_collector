@@ -16,3 +16,6 @@ $IPHT = @{
     AddressFamily = $IPType
 }
 New-NetIPAddress @IPType | Out-Null
+
+Get-NetIPAddress -InterfaceIndex $Index - AddressFamily $IPType |
+Format-Table IPAddress, InterfaceIndex, PrefixLength
