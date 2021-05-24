@@ -19,3 +19,10 @@ New-NetIPAddress @IPType | Out-Null
 
 Get-NetIPAddress -InterfaceIndex $Index - AddressFamily $IPType |
 Format-Table IPAddress, InterfaceIndex, PrefixLength
+
+# Setting DNS Server details
+$CAHT = @{
+    InterfaceIndex = $Index
+    ServerAddresses = '10.10.10.10'
+}
+Set-DnsClientServerAddress @CAHT
