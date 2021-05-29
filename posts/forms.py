@@ -7,8 +7,3 @@ class CsvModelForm(forms.ModelForm):
         model = Csv
         fields = ('File name',)
 
-# test concept
-class PostModelForm(forms.ModelForm):
-    class Meta:
-    model = Post
-    fields = ('File name',)
