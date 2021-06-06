@@ -1,10 +1,9 @@
 import pandas as pd
 from io import StringIO
 from django.shortcuts import render
-from .models import Post, Csv
+from .models import Post
 import csv, os
 from django.http import HttpResponse
-from .forms import CsvModelForm
 #from django.views.generic import ListView
 
 
@@ -36,9 +35,3 @@ def upload_file(request):
             obj.activated = True
             obj.save()
     return render(request, 'posts/posts_list.html', {'form': form})
-
-
-with file.path.open(mode="w", encoding='utf-8', newline="") as file:
-    writer = csv.writer(file)
-    for temp_list in posts:
-        writer.writerow(temp_list)
