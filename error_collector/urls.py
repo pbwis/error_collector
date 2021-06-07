@@ -9,7 +9,8 @@ from posts import views as post_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('posts/', include('posts.urls')),
-    path('', post_views.posts_list, name='home'),
+    #path('', post_views.posts_list, name='home'),
+    path('', include('csvs.urls', namespace='csvs') )
 ]
 
 urlpatterns += staticfiles_urlpatterns()

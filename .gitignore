@@ -8,10 +8,14 @@ manage.py
 error_collector/__pycache__/settings.cpython-39.pyc
 posts/__pycache__/models.cpython-39.pyc
 csvs/__init__.py
-csvs/admin.py
 csvs/__pycache__/__init__.cpython-39.pyc
 csvs/__pycache__/admin.cpython-39.pyc
 csvs/__pycache__/apps.cpython-39.pyc
 csvs/__pycache__/models.cpython-39.pyc
 error_collector/__pycache__/settings.cpython-39.pyc
 error_collector/__pycache__/settings.cpython-39.pyc
+db.sqlite3
+csvs/__pycache__/forms.cpython-39.pyc
+csvs/__pycache__/views.cpython-39.pyc
+error_collector/__pycache__/urls.cpython-39.pyc
+error_collector/__pycache__/urls.cpython-39.pyc
