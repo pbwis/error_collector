@@ -26,4 +26,14 @@ def upload_file_view(request):
 
 
 def list_of_data(request):
-    return render(request, 'csvs/list.html')
+    obj = Csv.objects.get()
+
+    with open(obj.file_name.path, 'r') as f:
+        reader = csv.reader(f)
+        for i, row in enumerate(reader):
+            if i == 0:
+                pass
+            else:
+                print(row)
+
+    return render(request, 'csvs/list.html', {'obj': obj})
