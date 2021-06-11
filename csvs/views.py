@@ -30,10 +30,11 @@ def list_of_data(request):
 
     with open(obj.file_name.path, 'r') as f:
         reader = csv.reader(f)
-        for i, row in enumerate(reader):
-            if i == 0:
-                pass
-            else:
-                print(row)
+        obj = reader
+       # for i, row in enumerate(reader):
+       #     if i == 0:
+       #         pass
+       #     else:
+       #         print(row)
 
     return render(request, 'csvs/list.html', {'obj': obj})
