@@ -6,7 +6,11 @@ main page
 
 {% block content %}
 list of data from CSV</br>
+
+{% for obj in objects %}
 {{ obj }}
+
+{% endfor %}
 
 
 {% endblock content %}
