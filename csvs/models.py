@@ -8,3 +8,8 @@ class Csv(models.Model):
 
     def __str__(self):
         return f"File id: {self.id}"
+
+
+class Test_Import(models.Model):
+    title_field = models.CharField()
+    size = models.CharField
