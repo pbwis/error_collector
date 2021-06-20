@@ -13,3 +13,4 @@ class Csv(models.Model):
 class Test_Import(models.Model):
     title_field = models.CharField()
     size = models.CharField
+    num_issues = models.IntegerField(max_length=10)
