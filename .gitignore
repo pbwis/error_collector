@@ -17,5 +17,3 @@ error_collector/__pycache__/settings.cpython-39.pyc
 db.sqlite3
 csvs/__pycache__/forms.cpython-39.pyc
 csvs/__pycache__/views.cpython-39.pyc
-error_collector/__pycache__/urls.cpython-39.pyc
-error_collector/__pycache__
